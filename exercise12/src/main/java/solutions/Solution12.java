@@ -3,7 +3,7 @@
  *  Copyright 2021 Detrich Lange
  */
 
-package Solutions;
+package solutions;
 import java.util.Scanner;
 
 /*
@@ -24,38 +24,32 @@ is the number of years the amount is invested, and A is the amount at the end of
  */
 
 public class Solution12 {
-    private static Scanner userInput = new Scanner(System.in);
+    private static final Scanner userInput = new Scanner(System.in);
 
     static int promptprincipal(){
         System.out.println("How much money are you investing? ");
         String inputPrincipal = userInput.nextLine();
-        int investPrincipal = Integer.parseInt(inputPrincipal);
-        return investPrincipal;
+        return Integer.parseInt(inputPrincipal);
     }
 
     static double promptrate(){
         System.out.println("At what percent interest annually? ");
         String inputRate = userInput.nextLine();
-        double investRate = Double.parseDouble(inputRate) / 100;
-        return investRate;
+        return Double.parseDouble(inputRate) / 100;
     }
 
     static int prompttime(){
         System.out.println("For how many years? ");
         String inputTime = userInput.nextLine();
-        int investTime = Integer.parseInt(inputTime);
-        return investTime;
+        return Integer.parseInt(inputTime);
     }
 
     static double calculateinterest(int investPrincipal, double investRate, int investTime){
-        double investFinal = investPrincipal * (1 + (investRate * investTime));
-        System.out.println(investFinal);
-        return investFinal;
+        return investPrincipal * (1 + (investRate * investTime));
     }
 
     static double rounding(double investFinal){
-        double investRounded = Math.ceil(investFinal * 100) / 100;
-        return investRounded;
+        return Math.ceil(investFinal * 100) / 100;
     }
 
     static void output(int investTime, double investRate, double investRounded){

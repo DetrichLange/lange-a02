@@ -3,7 +3,7 @@
  *  Copyright 2021 Detrich Lange
  */
 
-package Solutions;
+package solutions;
 import java.util.Scanner;
 
 /*
@@ -23,30 +23,26 @@ c_to
  */
 
 public class Solution11 {
-    private static Scanner userInput = new Scanner(System.in);
+    private static final Scanner userInput = new Scanner(System.in);
 
     static double prompteuros(){
         System.out.println("How many euros are you exchanging? ");
         String inputEuros = userInput.nextLine();
-        double exchangeEuros = Double.parseDouble(inputEuros);
-        return exchangeEuros;
+        return Double.parseDouble(inputEuros);
     }
 
     static double promptrate(){
         System.out.println("What is the exchange rate? ");
         String inputRate = userInput.nextLine();
-        double exchangeRate = Double.parseDouble(inputRate);
-        return exchangeRate;
+        return Double.parseDouble(inputRate);
     }
 
     static double convertvalues(double exchangeEuros, double exchangeRate){
-        double exchangeDollarsUnrounded = exchangeEuros * exchangeRate;
-        return exchangeDollarsUnrounded;
+        return exchangeEuros * exchangeRate;
     }
 
     static double rounddollars(double exchangeDollarsUnrounded){
-        double exchangeDollarsRounded = Math.ceil(exchangeDollarsUnrounded * 100) / 100;
-        return exchangeDollarsRounded;
+        return Math.ceil(exchangeDollarsUnrounded * 100) / 100;
     }
 
     static void output(double exchangeEuros, double exchangeRate, double exchangeDollarsRounded){

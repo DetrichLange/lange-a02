@@ -24,5 +24,5 @@ run {
 }
 
 application {
-    mainClass = "Solutions.Solution10"
+    mainClass = "solutions.Solution10"
 }

@@ -1,16 +1,0 @@
-
-N	java:S106"9Replace this use of System.out or System.err by a logger.(‰´–¶
-N	java:S106%"9Replace this use of System.out or System.err by a logger.(´½‚ý
-S	java:S106:"9Replace this use of System.out or System.err by a logger.(Ò‚ž˜úÿÿÿÿ
-k	java:S1170"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãßí¿øÿÿÿÿ
-x
-java:S1488 "bImmediately return this expression instead of assigning it to the temporary variable "roomLength".(œüêß
-w
-java:S1488'"aImmediately return this expression instead of assigning it to the temporary variable "roomWidth".(ÖìÃØ
-{
-java:S1488,"`Immediately return this expression instead of assigning it to the temporary variable "areaFeet".(¥í—†ùÿÿÿÿ
-ƒ
-java:S14881"hImmediately return this expression instead of assigning it to the temporary variable "gallonsConverted".(º’ô€ÿÿÿÿÿ
-c
-java:S2184,"HCast one of the operands of this multiplication operation to a "double".(¥í—†ùÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(íÌÔ°úÿÿÿÿ

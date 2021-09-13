@@ -3,7 +3,7 @@
  *  Copyright 2021 Detrich Lange
  */
 
-package Solutions;
+package solutions;
 import java.util.Scanner;
 
 /*
@@ -24,30 +24,26 @@ can't buy a partial gallon of paint. You must round up to the next whole gallon.
 
 public class Solution09 {
     static final double CONVERSIONFACTOR = 350;
-    private static Scanner userInput = new Scanner(System.in);
+    private static final Scanner userInput = new Scanner(System.in);
 
-    static int promptlength(){
+    static double promptlength(){
         System.out.println("What is the length of the room in feet? ");
         String inputLength = userInput.nextLine();
-        int roomLength = Integer.parseInt(inputLength);
-        return roomLength;
+        return Double.parseDouble(inputLength);
     }
 
-    static int promptwidth(){
+    static double promptwidth(){
         System.out.println("What is the width of the room in feet? ");
         String inputWidth = userInput.nextLine();
-        int roomWidth = Integer.parseInt(inputWidth);
-        return roomWidth;
+        return Double.parseDouble(inputWidth);
     }
 
-    static double areafeet(int roomLength, int roomWidth){
-        double areaFeet = roomLength * roomWidth;
-        return areaFeet;
+    static double areafeet(double roomLength, double roomWidth){
+        return roomLength * roomWidth;
     }
 
-    static double convertgallons(double areaFeet, double CONVERSIONFACTOR){
-        double gallonsConverted = areaFeet / CONVERSIONFACTOR;
-        return gallonsConverted;
+    static double convertgallons(double areaFeet){
+        return areaFeet / Solution09.CONVERSIONFACTOR;
     }
 
     static double roundgallons(double gallonsConverted){
@@ -61,13 +57,13 @@ public class Solution09 {
 
     public static void main(String[] args)
     {
-        int roomLength = promptlength();
+        double roomLength = promptlength();
 
-        int roomWidth = promptwidth();
+        double roomWidth = promptwidth();
 
         double areaFeet = areafeet(roomLength, roomWidth);
 
-        double gallonsConverted = convertgallons(areaFeet, CONVERSIONFACTOR);
+        double gallonsConverted = convertgallons(areaFeet);
 
         double gallonsRounded = roundgallons(gallonsConverted);
 

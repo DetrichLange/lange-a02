@@ -3,7 +3,7 @@
  *  Copyright 2021 Detrich Lange
  */
 
-package Solutions;
+package solutions;
 import java.util.Scanner;
 
 /*
@@ -27,44 +27,38 @@ then print out the subtotal, tax amount, and total.
 
 public class Solution10 {
     static final double TAXRATE = 0.055;
-    private static Scanner userInput = new Scanner(System.in);
+    private static final Scanner userInput = new Scanner(System.in);
 
     static double promptitemprice(int itemNumber){
-        System.out.printf("Enter the price of item %d:\n", itemNumber);
+        System.out.printf("Enter the price of item %d:%n", itemNumber);
         String inputPrice = userInput.nextLine();
-        double itemPrice = Double.parseDouble(inputPrice);
-        return itemPrice;
+        return Double.parseDouble(inputPrice);
     }
 
     static double promptitemquantity(){
         System.out.println("Enter the quantity of item:");
         String inputQuantity = userInput.nextLine();
-        double itemQuantity = Double.parseDouble(inputQuantity);
-        return itemQuantity;
+        return Double.parseDouble(inputQuantity);
     }
 
     static double itemtotal(double itemPrice, double itemQuantity){
-        double itemTotal = itemPrice * itemQuantity;
-        return itemTotal;
+        return itemPrice * itemQuantity;
     }
 
     static double addsubtotal(double item1Total, double item2Total, double item3Total){
-        double subtotal = item1Total + item2Total + item3Total;
-        return subtotal;
+        return item1Total + item2Total + item3Total;
     }
 
-    static double calculatetax(double subtotal, double TAXRATE){
-        double salesTax = subtotal * TAXRATE;
-        return salesTax;
+    static double calculatetax(double subtotal){
+        return subtotal * Solution10.TAXRATE;
     }
 
     static double calculatetotal(double subtotal, double salesTax){
-        double totalPrice = subtotal + salesTax;
-        return totalPrice;
+        return subtotal + salesTax;
     }
 
     static void output(double subtotal, double salesTax, double totalPrice){
-        System.out.printf("Subtotal: $%.2f\nTax: $%.2f\nTotal: $%.2f", subtotal, salesTax, totalPrice);
+        System.out.printf("Subtotal: $%.2f%nTax: $%.2f%nTotal: $%.2f", subtotal, salesTax, totalPrice);
     }
 
     public static void main(String[] args)
@@ -83,7 +77,7 @@ public class Solution10 {
 
         double subtotal = addsubtotal(item1Total, item2Total, item3Total);
 
-        double salesTax = calculatetax(subtotal, TAXRATE);
+        double salesTax = calculatetax(subtotal);
 
         double totalPrice = calculatetotal(subtotal, salesTax);
 

@@ -18,7 +18,7 @@ should get. If there are leftovers, show the number of leftover pieces.
  */
 
 public class Solution08 {
-    private static Scanner userInput = new Scanner(System.in);
+    private static final Scanner userInput = new Scanner(System.in);
 
     static int promptguests(){
         System.out.println("How many people? ");
