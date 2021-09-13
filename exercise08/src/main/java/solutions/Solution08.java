@@ -3,7 +3,7 @@
  *  Copyright 2021 Detrich Lange
  */
 
-package Solutions;
+package solutions;
 import java.util.Scanner;
 
 /*
@@ -23,22 +23,19 @@ public class Solution08 {
     static int promptguests(){
         System.out.println("How many people? ");
         String inputGuests = userInput.nextLine();
-        int partyGuests = Integer.parseInt(inputGuests);
-        return partyGuests;
+        return Integer.parseInt(inputGuests);
     }
 
     static int promptpizzas(){
         System.out.println("How many pizzas do you have? ");
         String inputPizzas = userInput.nextLine();
-        int partyPizzas = Integer.parseInt(inputPizzas);
-        return partyPizzas;
+        return Integer.parseInt(inputPizzas);
     }
 
     static int promptslices(){
         System.out.println("How many slices per pizza? ");
         String inputSlices = userInput.nextLine();
-        int partySlices = Integer.parseInt(inputSlices);
-        return partySlices;
+        return Integer.parseInt(inputSlices);
     }
 
     static int multiplyslices(int partyPizzas, int partySlices){
@@ -54,8 +51,9 @@ public class Solution08 {
     }
 
     static void output(int partyGuests, int partyPizzas, int totalSlices, int slicesPerPerson, int leftoverSlices){
-        System.out.printf("%d people with %d pizzas (%d slices)\nEach person gets %d pieces of pizza\nThere are %d " +
-                        "leftover pieces", partyGuests, partyPizzas, totalSlices, slicesPerPerson, leftoverSlices);
+        System.out.printf("""
+                %d people with %d pizzas (%d slices)%nEach person gets %d pieces of pizza%nThere are %d leftover \
+                pieces""", partyGuests, partyPizzas, totalSlices, slicesPerPerson, leftoverSlices);
     }
 
     public static void main(String[] args)

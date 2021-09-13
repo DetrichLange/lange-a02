@@ -3,7 +3,7 @@
  *  Copyright 2021 Detrich Lange
  */
 
-package Solutions;
+package solutions;
 import java.util.Scanner;
 import java.util.Calendar;
 
@@ -29,24 +29,21 @@ public class Solution06 {
     static int promptage(){
         System.out.println("What is your current age? ");
         String inputAge = userInput.nextLine();
-        int userAge = Integer.parseInt(inputAge);
-        return userAge;
+        return Integer.parseInt(inputAge);
     }
 
     static int promptretirement(){
         System.out.println("At what age would you like to retire? ");
         String inputRetirement = userInput.nextLine();
-        int userRetirement = Integer.parseInt(inputRetirement);
-        return userRetirement;
+        return Integer.parseInt(inputRetirement);
     }
 
     static int getyear(){
-        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-        return currentYear;
+        return Calendar.getInstance().get(Calendar.YEAR);
     }
 
     static void output(int userAge, int userRetirement, int currentYear){
-        System.out.printf("You have %d years left until you can retire.\nIt's %d, so you can retire in %d.",
+        System.out.printf("You have %d years left until you can retire.%nIt's %d, so you can retire in %d.",
                 userRetirement - userAge, currentYear, currentYear + userRetirement - userAge);
     }
 

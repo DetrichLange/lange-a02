@@ -3,7 +3,7 @@
  *  Copyright 2021 Detrich Lange
  */
 
-package Solutions;
+package solutions;
 import java.util.Scanner;
 
 /*
@@ -22,34 +22,30 @@ Then display the area of the room in both square feet and square meters.
 
 public class Solution07 {
     static final double CONVERSIONFACTOR = 0.09290304;
-    private static Scanner userInput = new Scanner(System.in);
+    private static final Scanner userInput = new Scanner(System.in);
 
     static int promptlength(){
         System.out.println("What is the length of the room in feet? ");
         String inputLength = userInput.nextLine();
-        int roomLength = Integer.parseInt(inputLength);
-        return roomLength;
+        return Integer.parseInt(inputLength);
     }
 
     static int promptwidth(){
         System.out.println("What is the width of the room in feet? ");
         String inputWidth = userInput.nextLine();
-        int roomWidth = Integer.parseInt(inputWidth);
-        return roomWidth;
+        return Integer.parseInt(inputWidth);
     }
 
     static double areafeet(int roomLength, int roomWidth){
-        double areaFeet = roomLength * roomWidth;
-        return areaFeet;
+        return roomLength * roomWidth;
     }
 
-    static double areameters(double areaFeet, double CONVERSIONFACTOR){
-        double areaMeters = areaFeet * CONVERSIONFACTOR;
-        return areaMeters;
+    static double areameters(double areaFeet){
+        return areaFeet * Solution07.CONVERSIONFACTOR;
     }
 
     static void output(int roomLength, int roomWidth, double areaFeet, double areaMeters){
-        System.out.printf("You entered dimensions of %d feet by %d feet.\nThe area is\n%.0f square feet\n%f square meters",
+        System.out.printf("You entered dimensions of %d feet by %d feet.%nThe area is%n%.0f square feet%n%f square meters",
                 roomLength, roomWidth, areaFeet, areaMeters);
     }
 
@@ -61,7 +57,7 @@ public class Solution07 {
 
         double areaFeet = areafeet(roomLength, roomWidth);
 
-        double areaMeters = areameters(areaFeet, CONVERSIONFACTOR);
+        double areaMeters = areameters(areaFeet);
 
         output(roomLength, roomWidth, areaFeet, areaMeters);
     }
