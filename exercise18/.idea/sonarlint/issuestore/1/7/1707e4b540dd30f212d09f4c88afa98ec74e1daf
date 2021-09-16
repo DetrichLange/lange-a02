@@ -1,0 +1,10 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(º˜¨å
+S	java:S106("9Replace this use of System.out or System.err by a logger.(È…Â²üÿÿÿÿ
+M	java:S1068"9Replace this use of System.out or System.err by a logger.(ÅáE
+S	java:S106="9Replace this use of System.out or System.err by a logger.(·­‚çÿÿÿÿÿ
+N	java:S106V"9Replace this use of System.out or System.err by a logger.(¢şŸï
+^
+java:S1192""HDefine a constant instead of duplicating this literal "Celsius" 3 times.(Ì™áû
+a
+java:S1192%"KDefine a constant instead of duplicating this literal "Fahrenheit" 3 times.(¨’™¯
