@@ -3,9 +3,8 @@
  *  Copyright 2021 Detrich Lange
  */
 
-package Solutions;
+package solutions;
 import java.util.Scanner;
-import java.lang.Math;
 
 /*
 Write a program to calculate the value of an investment compounded over time. The program should ask for the starting
@@ -22,34 +21,30 @@ the investment.
 
 
 public class Solution13 {
-    private static Scanner userInput = new Scanner(System.in);
+    private static final Scanner userInput = new Scanner(System.in);
 
     static double promptprincipal(){
         System.out.println("How much money are you investing? ");
         String inputPrincipal = userInput.nextLine();
-        double investPrincipal = Double.parseDouble(inputPrincipal);
-        return investPrincipal;
+        return Double.parseDouble(inputPrincipal);
     }
 
     static double promptrate(){
         System.out.println("At what percent interest annually? ");
         String inputRate = userInput.nextLine();
-        double investRate = Double.parseDouble(inputRate) / 100;
-        return investRate;
+        return Double.parseDouble(inputRate) / 100;
     }
 
     static double prompttime(){
         System.out.println("For how many years? ");
         String inputTime = userInput.nextLine();
-        double investTime = Double.parseDouble(inputTime);
-        return investTime;
+        return Double.parseDouble(inputTime);
     }
 
     static double promptcompounds(){
         System.out.println("How many times is this interest compounded per year? ");
         String inputCompounds = userInput.nextLine();
-        double investCompounds = Double.parseDouble(inputCompounds);
-        return investCompounds;
+        return Double.parseDouble(inputCompounds);
     }
 
     static double calculateinterest(double investPrincipal, double investRate, double investTime, double investCompounds){
@@ -59,8 +54,7 @@ public class Solution13 {
     }
 
     static double rounding(double investFinal){
-        double investRounded = Math.ceil(investFinal * 100) / 100;
-        return investRounded;
+        return Math.ceil(investFinal * 100) / 100;
     }
 
     static void output(double investPrincipal, double investRate, double investTime, double investCompounds,
