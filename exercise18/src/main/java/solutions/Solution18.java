@@ -86,8 +86,7 @@ public class Solution18 {
         System.out.printf("The temperature in %s is %s.", conversionType, tempFormat.format(convertedTemperature));
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         String conversionType = prompttype();
         String conversionFrom = conversionfromtype(conversionType);
         double conversionTemperature = prompttemperature(conversionFrom);
